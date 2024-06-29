@@ -74,6 +74,10 @@ header nav ul li a:hover {
   font-style: normal;
   transition: transform 0.3s ease;
 }
+.accordion .accordion-item .accordion-item-header i {
+  font-size: 34px;
+  font-weight: 600;
+}
 .accordion .accordion-item .accordion-item-body {
   max-height: 0;
   overflow: hidden;
@@ -590,21 +594,6 @@ main section .contacts .vector-rope {
   right: 2%;
   z-index: 1;
 }
-@media screen and (max-width: 767px) {
-  main section .contacts .vector-rope {
-    top: 18%;
-    right: -9%;
-  }
-  main section .contacts .vector-rope img {
-    width: 159px;
-  }
-}
-@media screen and (max-width: 400px) {
-  main section .contacts .vector-rope {
-    top: 11%;
-    right: -9%;
-  }
-}
 main section .contacts .creative-design-sec {
   padding-bottom: 3rem;
   display: flex;
@@ -662,17 +651,6 @@ main section .contacts .contact-header p {
   line-height: 170%;
   margin: 1.5rem 0 3rem;
 }
-@media screen and (max-width: 991px) {
-  main section .contacts .contact-header p {
-    width: 100%;
-    padding: 0 2.6rem;
-  }
-}
-@media screen and (max-width: 515px) {
-  main section .contacts .contact-header div h1 {
-    font-size: 2rem;
-  }
-}
 main section .contacts .contacts-container {
   padding: 0 7%;
 }
@@ -694,14 +672,6 @@ main section .contacts .contacts-container .fold {
   border-top-right-radius: 10px;
   transform: rotate(45deg) translate(19%, -145%);
   transform-origin: 0 0;
-}
-@media screen and (max-width: 991px) {
-  main section .contacts .contacts-container .corner-folded {
-    border-radius: 35px 35px 35px 35px;
-  }
-  main section .contacts .contacts-container .fold {
-    display: none;
-  }
 }
 main section .contacts .contacts-container .contacts-bg {
   height: auto;
@@ -865,10 +835,150 @@ main section .contacts .contacts-container button p {
   padding-left: 15px;
   font-size: 1.2rem;
 }
-main section .contacts .contacts-container button:hover {
-  background-color: #3d8b40;
+@media screen and (max-width: 991px) {
+  main section .testimonials {
+    padding: 0 5%;
+    border-radius: 8px;
+    margin-bottom: 5rem;
+  }
+  main section .testimonials .top-hr {
+    border-top: 0.1px solid rgba(70, 70, 70, 0.3) !important;
+  }
+  main section .testimonials .testimonial-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  main section .testimonials .testimonial-header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+  }
+  main section .testimonials .testimonial-header div h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 3.3rem;
+    font-weight: 700;
+    color: #BBD6F6;
+    padding: 11px 20px 0;
+    margin: 0;
+  }
+  main section .testimonials .testimonial-header p {
+    width: 45%;
+    text-align: center;
+    font-size: 16px;
+    padding: 0 3rem;
+    font-weight: 550;
+    line-height: 170%;
+    margin: 1.5rem 0 3rem;
+  }
+  main section .testimonials .testimonials-container {
+    flex-wrap: wrap;
+  }
+  main section .testimonials .testimonials-container .column {
+    max-width: 100%;
+  }
+  main section .contacts .contact-header p {
+    width: 100%;
+    padding: 0 2.6rem;
+  }
+  main section .contacts .contacts-container .corner-folded {
+    border-radius: 35px 35px 35px 35px;
+  }
+  main section .contacts .contacts-container .fold {
+    display: none;
+  }
 }
 @media screen and (max-width: 767px) {
+  main section .testimonials {
+    padding: 0 5%;
+    border-radius: 8px;
+    margin-bottom: 5rem;
+  }
+  main section .testimonials .top-hr {
+    border-top: 0.1px solid rgba(70, 70, 70, 0.3) !important;
+  }
+  main section .testimonials .testimonial-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  main section .testimonials .testimonial-header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+  }
+  main section .testimonials .testimonial-header div h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #BBD6F6;
+    padding: 0;
+    margin: 0;
+  }
+  main section .testimonials .testimonial-header p {
+    width: 65%;
+    text-align: center;
+    font-size: 16px;
+    padding: 0 3rem;
+    font-weight: 550;
+    line-height: 170%;
+    margin: 1.5rem 0 3rem;
+  }
+  main section .faq {
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+  main section .faq h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  main section .faq .faq-header div {
+    width: 70%;
+  }
+  main section .faq .faq-header div h1 {
+    font-size: 2.3rem;
+  }
+  main section .faq .faq-header p {
+    width: 65%;
+  }
+  main section .faq .faq-container {
+    padding: 0 5%;
+  }
+  main section .faq .faq-container .faq-item {
+    background: #171A2B;
+    padding: 20px;
+    border-radius: 25px;
+    border: 2px solid #313546;
+    margin: 20px 0;
+  }
+  main section .faq .faq-container .faq-item h3 {
+    margin: 0;
+  }
+  main section .faq .faq-container .faq-item p {
+    font-size: 15px;
+    line-height: 160%;
+    font-weight: 550;
+  }
+  main section .contacts {
+    padding: 0;
+  }
+  main section .contacts .vector-rope {
+    top: 18%;
+    right: -9%;
+  }
+  main section .contacts .vector-rope img {
+    width: 159px;
+  }
   main section .contacts .contacts-container {
     padding: 0 7%;
   }
@@ -917,29 +1027,266 @@ main section .contacts .contacts-container button:hover {
     width: 100%;
     padding: 0 1%;
   }
+  main section .contacts .contacts-container .checkbox-columns {
+    margin-bottom: 20%;
+  }
+}
+@media screen and (max-width: 515px) {
+  main section .contacts .contact-header div h1 {
+    font-size: 2rem;
+  }
+  main section .contacts .contacts-container .contacts-bg {
+    padding: 10%;
+  }
+  main section .contacts .contacts-container .form-group input,
+  main section .contacts .contacts-container .form-group select,
+  main section .contacts .contacts-container .form-group textarea {
+    width: 92%;
+  }
+  main section .contacts .contacts-container .form-group select {
+    width: 100%;
+  }
+  main section .contacts .contacts-container .checkbox-columns {
+    margin-bottom: 40%;
+  }
+  main section .contacts .contacts-container button {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  main section .faq {
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+  main section .faq h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  main section .faq .faq-header div {
+    width: 70%;
+  }
+  main section .faq .faq-header div h1 {
+    font-size: 2.3rem;
+  }
+  main section .faq .faq-header p {
+    width: 65%;
+  }
+  main section .faq .faq-container {
+    padding: 0 5%;
+  }
+  main section .faq .faq-container .faq-item {
+    background: #171A2B;
+    padding: 20px;
+    border-radius: 25px;
+    border: 2px solid #313546;
+    margin: 20px 0;
+  }
+  main section .faq .faq-container .faq-item h3 {
+    margin: 0;
+  }
+  main section .faq .faq-container .faq-item p {
+    font-size: 15px;
+    line-height: 160%;
+    font-weight: 550;
+  }
+  main section .contacts .vector-rope {
+    top: 12%;
+    right: -12%;
+  }
+  main section .contacts .contact-header {
+    padding: 0 9%;
+  }
+  main section .contacts .contact-header div h1 {
+    font-size: 2rem;
+    padding: 0;
+  }
+  main section .contacts .contact-header p {
+    font-size: 17px;
+    margin: 1.5rem 0 5rem;
+  }
 }
 
 footer {
-  background-color: #282828;
-  padding: 20px;
+  background-color: #171A2B;
   text-align: center;
   color: #fff;
+  margin-top: 4.5rem;
+  border-radius: 25px 25px 0 0;
 }
-footer .footer-content {
+footer .footer-container {
+  padding: 4rem 10%;
+}
+footer .footer-container .footer-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+footer .footer-container .footer-content .col-40 {
+  width: 36%;
+  text-align: left;
+  padding: 0 1rem;
+}
+footer .footer-container .footer-content .col-40 .social-media {
+  padding: 2.5rem 0;
+  display: flex;
+  gap: 25px;
+}
+footer .footer-container .footer-content .col-40 .info-container .info-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  height: 100%;
+  margin-bottom: 20px;
+}
+footer .footer-container .footer-content .col-40 .info-container .info-content div p {
+  margin-bottom: 10px;
+}
+footer .footer-container .footer-content .col-40 .info-container .info-content p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+footer .footer-container .footer-content .col-60 {
+  border-left: 0.5px solid rgb(70, 70, 70) !important;
+  width: 60%;
+  text-align: left;
+}
+footer .footer-container .footer-content .col-60 .menu-container {
+  width: 100%;
+  padding-left: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+footer .footer-container .footer-content .col-60 .menu-container .col-30 {
+  width: 30%;
+  gap: 20px;
+}
+footer .footer-container .footer-content .col-60 .menu-container .col-30 .mt-20 {
+  margin-top: 50px;
+}
+footer .footer-container .footer-content .col-60 .menu-container .col-30 h4 {
+  margin-top: 0;
+}
+footer .footer-container .footer-content .col-60 .menu-container .col-30 ul {
+  padding: 0;
+}
+footer .footer-container .footer-content .col-60 .menu-container .col-30 ul li {
+  margin: 0;
+  list-style: none;
+  margin: 15px 0;
+}
+footer .footer-container .footer-content .col-60 .menu-container .col-30 ul li a {
+  color: #BBD6F6;
+  font-size: 1rem;
+  font-weight: 550;
+  text-decoration: none;
+}
+footer .footer-container .footer-content .accordion .accordion-item-header i {
+  font-size: 34px;
+  font-weight: 600;
+}
+footer .footer-container .footer-content .accordion ul {
+  padding: 0;
+}
+footer .footer-container .footer-content .accordion ul li {
+  margin: 0;
+  list-style: none;
+  margin: 15px 0;
+}
+footer .footer-container .footer-content .accordion ul li a {
+  color: #BBD6F6;
+  font-size: 1rem;
+  font-weight: 550;
+  text-decoration: none;
+}
+footer .footer-container .footer-content .desktop {
+  display: flex;
+}
+footer .footer-container .footer-content .mobile {
+  display: none;
+}
+footer .footer-bottom-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 10%;
+  border-top: 0.1px solid rgba(70, 70, 70, 0.3) !important;
+  color: #545A71;
 }
-footer .footer-content .social-media {
+footer .footer-bottom-content .social-media {
   display: flex;
   gap: 20px;
 }
-footer .footer-content .social-media a {
+footer .footer-bottom-content .social-media a {
   text-decoration: none;
-  color: #fff;
+  color: #545A71;
 }
-footer .footer-content .social-media a:hover {
-  color: #4CAF50;
+footer .footer-bottom-content .social-media a:hover {
+  color: #BBD6F6;
+}
+@media screen and (max-width: 1030px) {
+  footer .footer-container {
+    padding: 2rem 6%;
+  }
+  footer .footer-container .footer-content .col-60 {
+    width: 58%;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .footer-container {
+    padding: 2rem 6%;
+  }
+  footer .footer-container .footer-content .col-40 {
+    width: 100%;
+    padding: 0;
+  }
+  footer .footer-container .footer-content .col-40 .social-media {
+    padding: 2.5rem 0;
+    display: flex;
+    gap: 25px;
+  }
+  footer .footer-container .footer-content .col-40 .info-container .info-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+  footer .footer-container .footer-content .col-40 .info-container .info-content div p {
+    margin-bottom: 10px;
+  }
+  footer .footer-container .footer-content .col-40 .info-container .info-content p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 550;
+  }
+  footer .footer-container .footer-content .col-60 {
+    border-left: none !important;
+    width: 100%;
+  }
+  footer .footer-container .footer-content .col-60 .menu-container {
+    padding-left: 0rem;
+  }
+  footer .footer-container .footer-content .accordion .accordion-item-header {
+    padding: 0;
+  }
+  footer .footer-container .footer-content .desktop {
+    display: none;
+  }
+  footer .footer-container .footer-content .mobile {
+    display: flex;
+  }
+  footer .footer-bottom-content {
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px 6%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
