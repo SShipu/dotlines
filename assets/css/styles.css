@@ -26,6 +26,7 @@ body {
   margin: 0;
   background-color: #1c1c1e;
   color: #BBD6F6;
+  overflow-x: hidden;
 }
 
 header {
@@ -48,9 +49,18 @@ header nav ul li a {
   text-decoration: none;
   color: #000;
   font-weight: 600;
+  font-size: 16px;
 }
 header nav ul li a:hover {
   color: #4CAF50;
+}
+@media screen and (max-width: 991px) {
+  header {
+    padding: 20px 5%;
+  }
+  header .desktop-nav {
+    display: none;
+  }
 }
 
 .accordion {
@@ -120,6 +130,7 @@ main section .hero .hero-text h3 {
 }
 main section .hero .hero-text p {
   font-size: 20px;
+  font-weight: 550;
 }
 main section .hero .hero-text .find-more-section {
   display: flex;
@@ -222,6 +233,8 @@ main section .vision h1 {
 main section .vision .services-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
   gap: 20px;
 }
 main section .vision .services-container .service {
@@ -229,6 +242,7 @@ main section .vision .services-container .service {
   border-radius: 25px;
   flex: 1;
   border: 1px solid #313546;
+  width: 33.3333333333%;
 }
 main section .vision .services-container .service .service-img {
   display: flex;
@@ -417,6 +431,7 @@ main section .testimonials .testimonial-header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 main section .testimonials .testimonial-header div {
   display: flex;
@@ -836,6 +851,265 @@ main section .contacts .contacts-container button p {
   font-size: 1.2rem;
 }
 @media screen and (max-width: 991px) {
+  main section {
+    padding: 2rem 0;
+  }
+  main section .hero {
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    flex-wrap: wrap;
+  }
+  main section .hero .hero-text {
+    max-width: 100%;
+    margin-top: 5%;
+  }
+  main section .hero .hero-text h1 {
+    font-size: 2.85rem;
+    margin: 0;
+    font-weight: 700;
+  }
+  main section .hero .hero-text .gradient-text {
+    background: linear-gradient(90deg, #FFB80C 0%, #FBBBC3 52%, #4691F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  main section .hero .hero-text h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1.4rem;
+    line-height: 170%;
+  }
+  main section .hero .hero-text p {
+    font-size: 20px;
+  }
+  main section .hero .hero-text .find-more-section {
+    display: flex;
+  }
+  main section .hero .hero-text .find-more-section .find-more {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../images/rectangle1.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 121px;
+    width: 121px;
+    margin-right: 20%;
+  }
+  main section .hero .hero-text .find-more-section .find-more p {
+    text-align: center;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  main section .hero .hero-text .find-more-section .find-more .column-words {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: 600;
+  }
+  main section .hero .hero-text .find-more-section .find-more .column-words span {
+    display: block;
+  }
+  main section .hero .hero-text .find-more-section .arrow-img {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+    background-image: url("../images/vector1.png");
+    height: 160px;
+    width: 210px;
+  }
+  main section .hero .hero-image {
+    width: 100%;
+  }
+  main section .hero .hero-image img {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 8px;
+  }
+  main section .vision {
+    padding: 0 5%;
+  }
+  main section .vision h1 {
+    font-size: 2rem;
+    padding: 0 5%;
+    margin: 50px 0 70px 0;
+  }
+  main section .vision .services-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+  }
+  main section .vision .services-container .service {
+    background: #171828;
+    border-radius: 25px;
+    flex: none;
+    border: 1px solid #313546;
+    width: 100%;
+  }
+  main section .vision .services-container .service .service-img {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: calc(10px + 5%);
+  }
+  main section .vision .services-container .service .service-text {
+    padding: calc(10px + 5%);
+  }
+  main section .vision .services-container .service .service-text h3 {
+    font-size: 1.4rem;
+  }
+  main section .vision .services-container .service .service-text p {
+    font-size: 16px;
+    font-weight: 550;
+  }
+  main section .life {
+    padding: 0 3.5rem;
+    color: #fff;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../images/sec-31.png");
+    height: 536px;
+    background-size: auto;
+  }
+  main section .life .gradient-text {
+    background: linear-gradient(90deg, #FFB80C 0%, #FBBBC3 46%, #4691F9 62%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  main section .life h1 {
+    margin: 0px;
+    font-size: 2.8rem;
+  }
+  main section .life .life-content {
+    display: flex;
+    justify-content: center;
+    width: 289px;
+    height: 289px;
+    margin: 80px auto;
+    font-size: 12px;
+  }
+  main section .life .life-content .video-content {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../images/sec-33.svg");
+    width: 240px;
+    height: 240px;
+  }
+  main section .life .life-content img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  main section .life .life-content svg {
+    overflow: visible;
+    animation: circular-text-rotate 20s linear infinite;
+  }
+  main section .life .life-content svg:hover {
+    animation-play-state: running;
+  }
+  main section .life .life-content path {
+    fill: none;
+  }
+  main section .life .life-content text {
+    fill: #b4a078;
+  }
+  @keyframes circular-text-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  main section .carnival {
+    padding: 0 5%;
+    display: flex;
+    align-items: flex-start;
+    background-size: cover;
+    flex-wrap: wrap;
+    width: auto;
+  }
+  main section .carnival .carnival-text {
+    padding-top: 3rem;
+    max-width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: none;
+    background-position: top;
+  }
+  main section .carnival .carnival-text div {
+    padding: 0;
+  }
+  main section .carnival .carnival-text div h1 {
+    font-size: 2.85rem;
+    margin: 0;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 25px;
+  }
+  main section .carnival .carnival-text div .gradient-text {
+    background: linear-gradient(90deg, #FFB80C 0%, #FBBBC3 52%, #4691F9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  main section .carnival .carnival-text div p {
+    font-size: 18px;
+    padding: 0;
+    font-weight: 550;
+    line-height: 170%;
+  }
+  main section .carnival .carnival-text div .find-more-section {
+    padding-top: 0;
+    width: auto;
+    padding-left: 0;
+    margin: 3rem 0;
+  }
+  main section .carnival .carnival-text div .find-more-section button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../images/sec-43.png");
+    background-color: transparent;
+    padding: 30px 0px;
+    color: #6CFFE6;
+    height: 50px;
+    border: none;
+    width: 100%;
+    font-size: 18px;
+  }
+  main section .carnival .carnival-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+  }
+  main section .carnival .carnival-image img {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 8px;
+  }
   main section .testimonials {
     padding: 0 5%;
     border-radius: 8px;
@@ -919,14 +1193,14 @@ main section .contacts .contacts-container button p {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    font-size: 2.3rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: #BBD6F6;
     padding: 0;
     margin: 0;
   }
   main section .testimonials .testimonial-header p {
-    width: 65%;
+    width: 90%;
     text-align: center;
     font-size: 16px;
     padding: 0 3rem;
@@ -1286,6 +1560,62 @@ footer .footer-bottom-content .social-media a:hover {
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 20px 6%;
+    text-align: left;
+  }
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+.hamburger nav {
+  gap: 2rem;
+}
+
+.inner-hamburger {
+  padding: 14px 5%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  width: 60%;
+  background-color: white;
+  height: 100%;
+  padding: 20px;
+  float: right;
+  right: 5.7%;
+}
+
+.overlay.open {
+  display: block;
+}
+
+.overlay-content nav ul {
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 5%;
+  }
+  .hamburger {
+    display: block;
   }
 }
 

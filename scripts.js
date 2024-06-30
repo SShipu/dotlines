@@ -104,3 +104,26 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     alert("Please review the information you have entered:\n\n" + popupContent);
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+    const body = document.querySelector("body");
+
+    hamburger.addEventListener('click', function() {
+        overlay.classList.toggle('open');
+
+        if (overlay.classList.contains('open')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = 'auto';
+        }
+    });
+
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) {
+            overlay.classList.remove('open');
+            body.style.overflow = 'auto';
+        }
+    });
+});
