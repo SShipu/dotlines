@@ -176,11 +176,11 @@ header {
     }
 }
 .inner-hamburger {
-    padding: 8px 7.2%;
+    padding: 8px 4%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background: linear-gradient(90deg, #FFB80C 40%, #FBBBC3 87%, #4691F9 94%);
+    background: linear-gradient(90deg, #FFB80C 82%, #FBBBC3 92%, #4691F9 96%);
     @include text-gradient;
 }
 
@@ -192,7 +192,8 @@ header {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    overflow-x: hidden;
+    // overflow-x: hidden;
+    overflow: hidden;
     transition: 0.5s;
 }
 
@@ -203,7 +204,8 @@ header {
     height: 100%;
     padding: 20px;
     float: right;
-    right: 5.7%;
+    // right: 5.7%;
+    right: 0;
 }
 
 .overlay.open {
@@ -218,10 +220,17 @@ header {
 
     header {
         padding: 10px 5%;
+        
     }
 
     .hamburger {
         display: block;
+
+        nav {
+            ul {
+                gap: 2rem;
+            }
+        }
     }
 }
 .accordion {
