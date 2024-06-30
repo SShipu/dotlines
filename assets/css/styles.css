@@ -971,6 +971,7 @@ main section .contacts .contacts-container .form-group .error {
   display: none;
   color: #EF2323;
   font-size: 14px;
+  font-weight: 550;
   position: absolute;
   padding: 0 1%;
   top: 100%;

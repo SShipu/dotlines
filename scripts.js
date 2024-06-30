@@ -118,8 +118,21 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         phoneError.style.display = 'inline-block';
         isValid = false;
     } else {
-        phoneError.style.display = 'none';
+        if (
+            phoneInput.value.trim().length && !phoneInput.value.match(
+                /(^(\+8801|8801|01|008801))[1|3-9]{1}(\d){8}$/
+            )
+        ) {
+            console.log("phoneInput errer");
+            phoneError.style.display = 'inline-block';
+            phoneError.innerHTML = "Please enter a Correct Mobile Number";
+            isValid = false;
+        } else {
+            phoneError.style.display = 'none';
+        }
     }
+
+    
 
     // submission validation
     if (!isValid) {
