@@ -595,9 +595,6 @@ main section .testimonials .testimonials-container .column .testimonial {
   border: 1px solid #313546;
   padding: calc(9px + 5%);
 }
-main section .testimonials .testimonials-container .column .testimonial.hide {
-  display: none;
-}
 main section .testimonials .testimonials-container .column .testimonial .testimonial-img {
   display: flex;
   align-items: center;
@@ -1256,6 +1253,9 @@ main section .contacts .contacts-container button p {
   }
   main section .testimonials .testimonials-container .column {
     max-width: 100%;
+  }
+  main section .testimonials .testimonials-container .column .testimonial.hide {
+    display: none;
   }
   main section .testimonials .see-more {
     display: block;

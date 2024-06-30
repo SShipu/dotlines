@@ -666,9 +666,6 @@ main {
                         flex: 1;
                         border: 1px solid #313546;
                         padding: calc(9px + 5%);
-                        &.hide {
-                            display: none;
-                        }
                         .testimonial-img {
                             display: flex;
                             align-items: center;
@@ -1360,12 +1357,15 @@ main {
                             margin: 1.5rem 0 3rem;
                         }
                     }
-                    
                     .testimonials-container {
                         flex-wrap: wrap;
                         .column {
                             max-width: 100%;
-                            
+                            .testimonial {
+                                &.hide {
+                                    display: none;
+                                }
+                            }
                             
                         }
                     }
