@@ -1,3 +1,49 @@
+//Mobile Header
+// document.addEventListener('DOMContentLoaded', function() {
+//     const hamburger = document.getElementById('hamburger');
+//     const overlay = document.getElementById('overlay');
+//     const body = document.querySelector("body");
+
+//     hamburger.addEventListener('click', function() {
+//         overlay.classList.toggle('open');
+
+//         if (overlay.classList.contains('open')) {
+//             body.style.overflow = 'hidden';
+//         } else {
+//             body.style.overflow = 'auto';
+//         }
+//     });
+
+//     overlay.addEventListener('click', function(e) {
+//         if (e.target === overlay) {
+//             overlay.classList.remove('open');
+//             body.style.overflow = 'auto';
+//         }
+//     });
+// });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const overlay = document.getElementById('overlay');
+    const menu = document.getElementById('menu');
+    const body = document.querySelector('body');
+
+    // Toggle overlay visibility and body scroll
+    hamburger.addEventListener('click', function() {
+        overlay.classList.toggle('open');
+        body.style.overflow = overlay.classList.contains('open') ? 'hidden' : 'auto';
+    });
+
+    // Close overlay when clicking outside the menu
+    document.addEventListener('click', function(e) {
+        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+            overlay.classList.remove('open');
+            body.style.overflow = 'auto';
+        }
+    });
+});
+
+
 //Accordion 
 document.addEventListener("DOMContentLoaded", () => {
     const accordionHeaders = document.querySelectorAll(
@@ -102,30 +148,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         Uploaded File:  ${uploadedFileName}
     `;
     alert("Please review the information you have entered:\n\n" + popupContent);
-});
-
-//Mobile Header
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.getElementById('hamburger');
-    const overlay = document.getElementById('overlay');
-    const body = document.querySelector("body");
-
-    hamburger.addEventListener('click', function() {
-        overlay.classList.toggle('open');
-
-        if (overlay.classList.contains('open')) {
-            body.style.overflow = 'hidden';
-        } else {
-            body.style.overflow = 'auto';
-        }
-    });
-
-    overlay.addEventListener('click', function(e) {
-        if (e.target === overlay) {
-            overlay.classList.remove('open');
-            body.style.overflow = 'auto';
-        }
-    });
 });
 
 //SEE More
