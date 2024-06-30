@@ -1374,6 +1374,11 @@ main {
                     }
                 }
                 .contacts {
+
+                    .vector-rope {
+                        top: 5%;
+                        right: -8%;
+                    }
                     .contact-header {
                         
                         div {
@@ -1494,12 +1499,24 @@ main {
             }
 
             .contacts {
-                padding: 0;
+                overflow: hidden;
+                // padding: 0;
                 .vector-rope {
-                    top: 18%;
-                    right: -9%;
+                    top: 13%;
+                    right: -5%;
                     img {
                         width: 159px;
+                    }
+                }
+                .contact-header {
+                        
+                    div {
+                       
+                        h1 {
+                        }
+                    }
+                    p {
+                        padding: 0 2.6rem;
                     }
                 }
                 .contacts-container {
@@ -1560,6 +1577,10 @@ main {
         }
         @media screen and (max-width: 515px) {
             .contacts {
+                .vector-rope {
+                    top: 12%;
+                    right: -12%;
+                }
                 .contact-header {
                     
                     div {
@@ -1650,6 +1671,7 @@ main {
             }
 
             .contacts {
+                padding: 0;
                 .vector-rope {
                     top: 12%;
                     right: -12%;

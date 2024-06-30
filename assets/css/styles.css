@@ -1260,6 +1260,10 @@ main section .contacts .contacts-container button p {
   main section .testimonials .see-more {
     display: block;
   }
+  main section .contacts .vector-rope {
+    top: 5%;
+    right: -8%;
+  }
   main section .contacts .contact-header p {
     width: 100%;
     padding: 0 2.6rem;
@@ -1350,14 +1354,17 @@ main section .contacts .contacts-container button p {
     font-weight: 550;
   }
   main section .contacts {
-    padding: 0;
+    overflow: hidden;
   }
   main section .contacts .vector-rope {
-    top: 18%;
-    right: -9%;
+    top: 13%;
+    right: -5%;
   }
   main section .contacts .vector-rope img {
     width: 159px;
+  }
+  main section .contacts .contact-header p {
+    padding: 0 2.6rem;
   }
   main section .contacts .contacts-container {
     padding: 0 7%;
@@ -1412,6 +1419,10 @@ main section .contacts .contacts-container button p {
   }
 }
 @media screen and (max-width: 515px) {
+  main section .contacts .vector-rope {
+    top: 12%;
+    right: -12%;
+  }
   main section .contacts .contact-header div h1 {
     font-size: 2rem;
   }
@@ -1468,6 +1479,9 @@ main section .contacts .contacts-container button p {
     font-size: 15px;
     line-height: 160%;
     font-weight: 550;
+  }
+  main section .contacts {
+    padding: 0;
   }
   main section .contacts .vector-rope {
     top: 12%;
