@@ -40,6 +40,38 @@ header .logo {
   font-size: 24px;
   font-weight: bold;
 }
+header .logo .logo-content {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../images/logo-2.svg");
+  width: 65px;
+  height: 65px;
+  margin: 5px;
+  font-size: 14px;
+  font-weight: 550;
+}
+header .logo .logo-content svg {
+  overflow: visible;
+  animation: circular-text-rotate 20s linear infinite;
+}
+header .logo .logo-content svg:hover {
+  animation-play-state: running;
+}
+header .logo .logo-content path {
+  fill: none;
+}
+header .logo .logo-content text {
+  fill: #000;
+}
+@keyframes circular-text-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 header nav ul {
   list-style: none;
   display: flex;
@@ -63,6 +95,72 @@ header nav ul li a:hover {
   }
 }
 
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+.hamburger span {
+  background: linear-gradient(90deg, #FFB80C 0%, #FBBBC3 52%, #4691F9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.hamburger nav {
+  gap: 2rem;
+}
+
+.inner-hamburger {
+  padding: 8px 7.2%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: linear-gradient(90deg, #FFB80C 40%, #FBBBC3 87%, #4691F9 94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  width: 60%;
+  background-color: white;
+  height: 100%;
+  padding: 20px;
+  float: right;
+  right: 5.7%;
+}
+
+.overlay.open {
+  display: block;
+}
+
+.overlay-content nav ul {
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 5%;
+  }
+  .hamburger {
+    display: block;
+  }
+}
 .accordion {
   width: 100%;
   margin: 20px auto;
@@ -283,37 +381,46 @@ main section .life h1 {
   font-size: 2.8rem;
 }
 main section .life .life-content {
-  display: flex;
-  justify-content: center;
-  width: 289px;
-  height: 289px;
-  margin: 80px auto;
-  font-size: 12px;
-}
-main section .life .life-content .video-content {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("../images/sec-33.svg");
+  background-image: url("../images/player-bg.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 240px;
   height: 240px;
+  margin: 80px auto;
 }
-main section .life .life-content img {
+main section .life .life-content .video-container {
+  width: 140px;
+  height: 140px;
+  font-size: 16px;
+}
+main section .life .life-content .video-container .video-content {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-image: url("../images/sec-34.svg");
+  cursor: pointer;
+}
+main section .life .life-content .video-container img {
   max-width: 100%;
   border-radius: 8px;
 }
-main section .life .life-content svg {
+main section .life .life-content .video-container svg {
   overflow: visible;
   animation: circular-text-rotate 20s linear infinite;
 }
-main section .life .life-content svg:hover {
+main section .life .life-content .video-container svg:hover {
   animation-play-state: running;
 }
-main section .life .life-content path {
+main section .life .life-content .video-container path {
   fill: none;
 }
-main section .life .life-content text {
-  fill: #b4a078;
+main section .life .life-content .video-container text {
+  fill: #fff;
 }
 @keyframes circular-text-rotate {
   from {
@@ -978,10 +1085,6 @@ main section .contacts .contacts-container button p {
   main section .life {
     padding: 0 3.5rem;
     color: #fff;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url("../images/sec-31.png");
     height: 536px;
     background-size: auto;
   }
@@ -995,47 +1098,6 @@ main section .contacts .contacts-container button p {
   main section .life h1 {
     margin: 0px;
     font-size: 2.8rem;
-  }
-  main section .life .life-content {
-    display: flex;
-    justify-content: center;
-    width: 289px;
-    height: 289px;
-    margin: 80px auto;
-    font-size: 12px;
-  }
-  main section .life .life-content .video-content {
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url("../images/sec-33.svg");
-    width: 240px;
-    height: 240px;
-  }
-  main section .life .life-content img {
-    max-width: 100%;
-    border-radius: 8px;
-  }
-  main section .life .life-content svg {
-    overflow: visible;
-    animation: circular-text-rotate 20s linear infinite;
-  }
-  main section .life .life-content svg:hover {
-    animation-play-state: running;
-  }
-  main section .life .life-content path {
-    fill: none;
-  }
-  main section .life .life-content text {
-    fill: #b4a078;
-  }
-  @keyframes circular-text-rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
   }
   main section .carnival {
     padding: 0 5%;
@@ -1402,6 +1464,42 @@ footer .footer-container .footer-content .col-40 {
   text-align: left;
   padding: 0 1rem;
 }
+footer .footer-container .footer-content .col-40 .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+footer .footer-container .footer-content .col-40 .logo .logo-content {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../images/logo-2.svg");
+  width: 75px;
+  height: 75px;
+  margin: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+footer .footer-container .footer-content .col-40 .logo .logo-content svg {
+  overflow: visible;
+  animation: circular-text-rotate 20s linear infinite;
+}
+footer .footer-container .footer-content .col-40 .logo .logo-content svg:hover {
+  animation-play-state: running;
+}
+footer .footer-container .footer-content .col-40 .logo .logo-content path {
+  fill: none;
+}
+footer .footer-container .footer-content .col-40 .logo .logo-content text {
+  fill: #fff;
+}
+@keyframes circular-text-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 footer .footer-container .footer-content .col-40 .social-media {
   padding: 2.5rem 0;
   display: flex;
@@ -1416,6 +1514,10 @@ footer .footer-container .footer-content .col-40 .info-container .info-content {
 }
 footer .footer-container .footer-content .col-40 .info-container .info-content div p {
   margin-bottom: 10px;
+}
+footer .footer-container .footer-content .col-40 .info-container .info-content div p a {
+  text-decoration: none;
+  color: #fff;
 }
 footer .footer-container .footer-content .col-40 .info-container .info-content p {
   margin: 0;
@@ -1476,6 +1578,9 @@ footer .footer-container .footer-content .accordion ul li a {
   font-size: 1rem;
   font-weight: 550;
   text-decoration: none;
+}
+footer .footer-container .footer-content .accordion ul li a:hover {
+  color: #81A4CD;
 }
 footer .footer-container .footer-content .desktop {
   display: flex;
@@ -1561,61 +1666,6 @@ footer .footer-bottom-content .social-media a:hover {
     flex-wrap: wrap;
     padding: 20px 6%;
     text-align: left;
-  }
-}
-
-.hamburger {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-}
-.hamburger nav {
-  gap: 2rem;
-}
-
-.inner-hamburger {
-  padding: 14px 5%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  overflow-x: hidden;
-  transition: 0.5s;
-}
-
-.overlay-content {
-  position: relative;
-  width: 60%;
-  background-color: white;
-  height: 100%;
-  padding: 20px;
-  float: right;
-  right: 5.7%;
-}
-
-.overlay.open {
-  display: block;
-}
-
-.overlay-content nav ul {
-  flex-direction: column;
-}
-
-@media (max-width: 768px) {
-  header {
-    padding: 10px 5%;
-  }
-  .hamburger {
-    display: block;
   }
 }
 

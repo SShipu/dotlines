@@ -42,10 +42,11 @@ $gradient-end: #4691F9;
 
 // Mixin for text gradient
 @mixin text-gradient {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+//   background: linear-gradient(90deg, $gradient-start 0%, $gradient-middle 52%, $gradient-end 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
 // Mixin for text gradient
@@ -57,6 +58,7 @@ $gradient-end: #4691F9;
 
 // btn
 @mixin button-styles($bg-color) {
+    // background-color: $bg-color;
     border: none;
     border-radius: 4px;
     color: #fff;
@@ -165,23 +167,20 @@ header {
 .hamburger {
     display: none;
     font-size: 30px;
-    span {
-
-        background: linear-gradient(90deg, $gradient-start 0%, $gradient-middle 52%, $gradient-end 100%);
-        @include text-gradient;
-    }
+    background: linear-gradient(90deg, $gradient-start 0%, $gradient-middle 52%, $gradient-end 100%);
+    @include text-gradient;
     cursor: pointer;
     nav {
         gap: 2rem
     }
 }
 .inner-hamburger {
-    padding: 8px 7.2%;
+    padding: 14px 5%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background: linear-gradient(90deg, #FFB80C 40%, #FBBBC3 87%, #4691F9 94%);
-    @include text-gradient;
+    // background: linear-gradient(90deg, #FFB80C 40%, #FBBBC3 89%, #4691F9 96%);
+    // @include text-gradient;
 }
 
 .overlay {
@@ -268,6 +267,7 @@ header {
 main {
     section {
         padding: 4.5rem 0;
+        // padding: 4.5rem 3.5rem;
         .hero {
             padding: 0 3.5rem;
             display: flex;
@@ -352,6 +352,7 @@ main {
     
         .vision {
             padding: 0 3.5rem;
+            // background-color: $secondary-background-color;
             border-radius: 8px;
             margin-bottom: 5rem;
 
@@ -433,75 +434,109 @@ main {
     
         .life {
             padding: 0 3.5rem;
+            // background: #fff;
             color: #fff;
+            // padding: 40px;
+            // border-radius: 8px;
+            // margin-bottom: 40px;
             @include background-image-contain();
             background-image: url('../images/sec-31.png');
             height: 536px;
             background-size: auto;
             .gradient-text {
+                // background: linear-gradient(90deg, #FFB80C 0%, #FBBBC3 4%, #4691F9 10%);
                 background: linear-gradient(90deg, #FFB80C 0%, #FBBBC3 9%, #4691F9 15%);
                 @include text-gradient;
             }
     
             h1 {
+                // text-align: center;
                 margin: 0px;
                 font-size: 2.8rem;
             }
     
             .life-content {
-                @include background-image-contain();
-                background-image: url('../images/player-bg.png');
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                width: 240px;
-                height: 240px;
-                margin: 80px auto;
 
-                .video-container {
-                    .video-content {
-                        @include background-image-contain();
-                        background-size: 65%;
-                        background-image: url('../images/sec-34.svg');
-                        cursor: pointer;
-                    }
-        
-                    img {
-                        max-width: 100%;
-                        border-radius: 8px;
-                    }
+                .video-content {
+                    @include background-image-contain();
+                    background-image: url('../images/sec-33.svg');
+                    width: 240px;
+                    height: 240px;
+                    // div {
+                    //     width: 289px;
+                    //     height: 289px;
+                    //     margin: 80px auto;
+                    //     font-size: 12px;
+                    // }
+                    // div svg {
+                    //     overflow: visible;
+                    //     animation: circular-text-rotate 20s linear infinite;
+                    // }
+                    // div svg:hover {
+                    //     animation-play-state: running;
+                    // }
+                    // div path {
+                    //     fill: none;
+                    // }
+                    // div .play-button {
+                    //     transform-origin: center;
+                    //     transition: transform 0.3s ease-out;
+                    // }
+                    // div .play-button:hover {
+                    //     transform: scale(1.1); /* Example hover effect */
+                    // }
+                    // div text {
+                    //     fill: #b4a078;
+                    // }
+                    // @keyframes circular-text-rotate {
+                    //     from {
+                    //         transform: rotate(0deg);
+                    //     }
+                    //     to {
+                    //         transform: rotate(360deg);
+                    //     }
+                    // }
+                }
     
-                    width: 140px;
-                    height: 140px;
-    
-                    font-size: 16px;
-                    
+                img {
+                    max-width: 100%;
+                    border-radius: 8px;
+                }
+
+                // main {
+                    width: 289px;
+                    height: 289px;
+                    margin: 80px auto;
+                    font-size: 12px;
+                  
                     svg {
-                        overflow: visible;
-                        animation: circular-text-rotate 20s linear infinite;
-                    
-                        &:hover {
+                      overflow: visible;
+                      animation: circular-text-rotate 20s linear infinite;
+                  
+                      &:hover {
                         animation-play-state: running;
-                        }
+                      }
                     }
-                    
+                  
                     path {
-                        fill: none;
+                      fill: none;
                     }
-                    
+                  
                     text {
-                        fill: #fff;
+                      fill: #b4a078;
                     }
-                    }
-                    
-                    @keyframes circular-text-rotate {
+                  }
+                  
+                  @keyframes circular-text-rotate {
                     from {
-                        transform: rotate(0deg);
+                      transform: rotate(0deg);
                     }
                     to {
-                        transform: rotate(360deg);
+                      transform: rotate(360deg);
                     }
-                }
+                //   }
                   
             }
         }
@@ -515,9 +550,13 @@ main {
             .carnival-text {
                 padding-top: 3rem;
                 max-width: 55%;
+                // margin-top: 5%;
                 @include background-image-contain();
                 background-image: url('../images/sec-41.png');
                 background-position: top;
+                // background-size: cov`er;
+                // display: flex;
+                // justify-content: center;
                 div {
                     padding: 0 1.9rem 1rem;
                     h1 {
@@ -532,7 +571,15 @@ main {
                         @include text-gradient;
                     }
         
+                    // h3 {
+                    //     font-size: 2.3rem;
+                    //     font-weight: 600;
+                    //     color: $text-white;
+                    //     margin-bottom: 3.5rem;
+                    // }
                     p {
+                        // font-size: 20px;
+                        // padding: 0 2rem;
                         font-size: 18px;
                         padding: 0 3rem;
                         font-weight: 550;
@@ -644,6 +691,7 @@ main {
             .testimonials-container {
                 display: flex;
                 justify-content: space-between;
+                // flex-wrap: wrap;
                 gap: 20px;
                 .column {
                     gap: 20px;
@@ -888,6 +936,14 @@ main {
                     transform: rotate(45deg) translate(19%, -145%);
                     transform-origin: 0 0;
                 }
+                // @media screen and (max-width: 991px) {
+                //     .corner-folded {
+                //         border-radius: 35px 35px 35px 35px;
+                //     }
+                //     .fold {
+                //         display: none;
+                //     }
+                // }
                 .contacts-bg {
                     height: auto;
                     padding: 5%;
@@ -1059,8 +1115,12 @@ main {
                     p {
                         padding-left: 15px;
                         font-size: 1.2rem;
+                        // font-weight: $fw-3;
                     }
         
+                    // &:hover {
+                    //     background-color: darken($primary-color, 10%);
+                    // }
                 }
 
             }
@@ -1197,16 +1257,70 @@ main {
                 .life {
                     padding: 0 3.5rem;
                     color: #fff;
+                    @include background-image-contain();
+                    background-image: url('../images/sec-31.png');
                     height: 536px;
                     background-size: auto;
                     .gradient-text {
+                        // background: linear-gradient(90deg, #FFB80C 0%, #FBBBC3 4%, #4691F9 10%);
                         background: linear-gradient(90deg, #FFB80C 0%, #FBBBC3 46%, #4691F9 62%);
                         @include text-gradient;
                     }
             
                     h1 {
+                        // text-align: center;
                         margin: 0px;
                         font-size: 2.8rem;
+                    }
+            
+                    .life-content {
+                        display: flex;
+                        justify-content: center;
+        
+                        .video-content {
+                            @include background-image-contain();
+                            background-image: url('../images/sec-33.svg');
+                            width: 240px;
+                            height: 240px;
+                            
+                        }
+            
+                        img {
+                            max-width: 100%;
+                            border-radius: 8px;
+                        }
+        
+                            width: 289px;
+                            height: 289px;
+                            margin: 80px auto;
+                            font-size: 12px;
+                          
+                            svg {
+                              overflow: visible;
+                              animation: circular-text-rotate 20s linear infinite;
+                          
+                              &:hover {
+                                animation-play-state: running;
+                              }
+                            }
+                          
+                            path {
+                              fill: none;
+                            }
+                          
+                            text {
+                              fill: #b4a078;
+                            }
+                          }
+                          
+                          @keyframes circular-text-rotate {
+                            from {
+                              transform: rotate(0deg);
+                            }
+                            to {
+                              transform: rotate(360deg);
+                            }
+                          
                     }
                 }
                 .carnival {
@@ -1634,13 +1748,16 @@ main {
 
 footer {
     background-color: $secondary-background-color;
+    // padding: 20px;
     text-align: center;
     color: $text-white;
     margin-top: 4.5rem;
     border-radius: 25px 25px 0 0;
     
     .footer-container {
+        // padding: 0 3.5rem;
         padding: 4rem 10%;
+        // padding-top: 4rem;
 
         .footer-content {
             display: flex;
@@ -1653,46 +1770,6 @@ footer {
                 width: 36%;
                 text-align: left;
                 padding: 0 1rem;
-                .logo {
-                    .logo-content {
-                        @include background-image-contain();
-                        background-image: url('../images/logo-2.svg');
-                    
-                        width: 75px;
-                        height: 75px;
-                        margin: 5px;
-                        font-size: 14px;
-                        font-weight: $fw-4;
-                        
-                        svg {
-                            overflow: visible;
-                            animation: circular-text-rotate 20s linear infinite;
-                        
-                            &:hover {
-                            animation-play-state: running;
-                            }
-                        }
-                        
-                        path {
-                            fill: none;
-                        }
-                        
-                        text {
-                            fill: #fff;
-                        }
-                    }
-                        
-                    @keyframes circular-text-rotate {
-                        from {
-                            transform: rotate(0deg);
-                        }
-                        to {
-                            transform: rotate(360deg);
-                        }
-                    }
-                    font-size: 24px;
-                    font-weight: $fw-bold;
-                }
                 .social-media {
                     padding: 2.5rem 0;
                     display: flex;
@@ -1708,10 +1785,6 @@ footer {
                         div {
                             p {
                                 margin-bottom: 10px;
-                                a {
-                                    text-decoration: none;
-                                    color: #fff;
-                                }
                             }
                         }
                         p {
@@ -1782,9 +1855,6 @@ footer {
                             font-size: 1rem;
                             font-weight: $fw-3;
                             text-decoration: none;
-                            &:hover {
-                                color: #81A4CD;
-                            }
                         }
                     }
                 }
