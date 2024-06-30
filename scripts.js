@@ -104,7 +104,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     alert("Please review the information you have entered:\n\n" + popupContent);
 });
 
-
+//Mobile Header
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.getElementById('hamburger');
     const overlay = document.getElementById('overlay');
@@ -127,3 +127,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+//SEE More
+document.addEventListener("DOMContentLoaded", function () {
+    const seeMoreBtn = document.getElementById("see-more-btn");
+    const hiddenTestimonials = document.querySelectorAll(".testimonial.hide");
+
+    seeMoreBtn.addEventListener("click", function () {
+        hiddenTestimonials.forEach((testimonial) => {
+            testimonial.classList.toggle("hide");
+        });
+
+        if (seeMoreBtn.innerText === "Load More") {
+            seeMoreBtn.innerText = "Load Less";
+        } else {
+            seeMoreBtn.innerText = "Load More";
+        }
+    });
+});
+

@@ -468,6 +468,14 @@ main section .carnival .carnival-text div p {
   font-weight: 550;
   line-height: 170%;
 }
+main section .carnival .carnival-text div .inter-pack {
+  display: none;
+  color: #0099FF;
+  text-decoration: none;
+  line-height: 170%;
+  font-size: 18px;
+  font-weight: 550;
+}
 main section .carnival .carnival-text div .find-more-section {
   padding-top: 3rem;
   width: 37%;
@@ -587,6 +595,9 @@ main section .testimonials .testimonials-container .column .testimonial {
   border: 1px solid #313546;
   padding: calc(9px + 5%);
 }
+main section .testimonials .testimonials-container .column .testimonial.hide {
+  display: none;
+}
 main section .testimonials .testimonials-container .column .testimonial .testimonial-img {
   display: flex;
   align-items: center;
@@ -620,6 +631,31 @@ main section .testimonials .testimonials-container .column .testimonial .testimo
 }
 main section .testimonials .testimonials-container .column .testimonial .testimonial-client .client-info h5 {
   margin: 0;
+}
+main section .testimonials .see-more {
+  padding-top: 1rem;
+  width: 100%;
+  display: none;
+}
+main section .testimonials .see-more button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../images/sec-43.png");
+  background-color: transparent !important;
+  padding: 10px 20px;
+  color: #6CFFE6;
+  height: 50px;
+  border: none;
+  width: 100%;
+  font-size: 18px;
+}
+main section .testimonials .see-more button:hover {
+  color: #4CA495;
 }
 main section .faq {
   border-radius: 8px;
@@ -1139,6 +1175,9 @@ main section .contacts .contacts-container button p {
     font-weight: 550;
     line-height: 170%;
   }
+  main section .carnival .carnival-text div .inter-pack {
+    display: block;
+  }
   main section .carnival .carnival-text div .find-more-section {
     padding-top: 0;
     width: auto;
@@ -1217,6 +1256,9 @@ main section .contacts .contacts-container button p {
   }
   main section .testimonials .testimonials-container .column {
     max-width: 100%;
+  }
+  main section .testimonials .see-more {
+    display: block;
   }
   main section .contacts .contact-header p {
     width: 100%;
@@ -1299,6 +1341,8 @@ main section .contacts .contacts-container button p {
   }
   main section .faq .faq-container .faq-item h3 {
     margin: 0;
+    font-size: 1rem;
+    line-height: 172%;
   }
   main section .faq .faq-container .faq-item p {
     font-size: 15px;

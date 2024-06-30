@@ -102,7 +102,7 @@ header {
             height: 65px;
             margin: 5px;
             font-size: 14px;
-            font-weight: 550;
+            font-weight: $fw-3;
             
             svg {
                 overflow: visible;
@@ -535,10 +535,17 @@ main {
                     p {
                         font-size: 18px;
                         padding: 0 3rem;
-                        font-weight: 550;
+                        font-weight: $fw-3;
                         line-height: 170%;
                     }
-    
+                    .inter-pack {
+                        display: none;
+                        color: #0099FF;
+                        text-decoration: none;
+                        line-height: 170%;
+                        font-size: 18px;
+                        font-weight: $fw-3;
+                    }
                     .find-more-section {
                         padding-top: 3rem;
                         width: 37%;
@@ -635,7 +642,7 @@ main {
                     text-align: center;
                     font-size: 16px;
                     padding: 0 3rem;
-                    font-weight: 550;
+                    font-weight: $fw-3;
                     line-height: 170%;
                     margin: 1.5rem 0 3rem;
                 }
@@ -659,6 +666,9 @@ main {
                         flex: 1;
                         border: 1px solid #313546;
                         padding: calc(9px + 5%);
+                        &.hide {
+                            display: none;
+                        }
                         .testimonial-img {
                             display: flex;
                             align-items: center;
@@ -700,6 +710,32 @@ main {
                     
                 }
             }
+
+            .see-more {
+                padding-top: 1rem;
+                width: 100%;
+                display: none;
+
+                button {
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include background-image-contain();
+                    background-image: url('../images/sec-43.png');
+                    background-color: transparent !important;
+                    padding: 10px 20px;
+                    color: $text-cyan;
+                    height: 50px;
+                    border: none;
+                    width: 100%;
+                    font-size: 18px;
+                    &:hover {
+                        color: #4CA495;
+                    }
+                }
+            }
+
         }
     
         
@@ -763,7 +799,7 @@ main {
                     text-align: center;
                     font-size: 16px;
                     padding: 0 3rem;
-                    font-weight: 550;
+                    font-weight: $fw-3;
                     line-height: 170%;
                     margin: 1.5rem 0 3rem;
                 }
@@ -858,7 +894,7 @@ main {
                     text-align: center;
                     font-size: 16px;
                     padding: 0 3rem;
-                    font-weight: 550;
+                    font-weight: $fw-3;
                     line-height: 170%;
                     margin: 1.5rem 0 3rem;
                 }
@@ -1007,7 +1043,7 @@ main {
                     label {
                         display: block;
                         color: $text-black;
-                        font-weight: 550;
+                        font-weight: $fw-3;
                         font-size: 14px;
                     }
                     .label {
@@ -1240,10 +1276,13 @@ main {
                             p {
                                 font-size: 18px;
                                 padding: 0;
-                                font-weight: 550;
+                                font-weight: $fw-3;
                                 line-height: 170%;
                             }
-            
+                            .inter-pack {
+                                display: block;
+                                
+                            }
                             .find-more-section {
                                 padding-top: 0;
                                 width: auto;
@@ -1316,7 +1355,7 @@ main {
                             text-align: center;
                             font-size: 16px;
                             padding: 0 3rem;
-                            font-weight: 550;
+                            font-weight: $fw-3;
                             line-height: 170%;
                             margin: 1.5rem 0 3rem;
                         }
@@ -1329,6 +1368,9 @@ main {
                             
                             
                         }
+                    }
+                    .see-more {
+                        display: block;
                     }
                 }
                 .contacts {
@@ -1394,7 +1436,7 @@ main {
                         text-align: center;
                         font-size: 16px;
                         padding: 0 3rem;
-                        font-weight: 550;
+                        font-weight: $fw-3;
                         line-height: 170%;
                         margin: 1.5rem 0 3rem;
                     }
@@ -1436,6 +1478,8 @@ main {
         
                         h3 {
                             margin: 0;
+                            font-size: 1rem;
+                            line-height: 172%;
                         }
                         p {
                             font-size: 15px;
