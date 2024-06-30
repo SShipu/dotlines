@@ -992,7 +992,7 @@ main section .contacts .contacts-container button p {
 }
 @media screen and (max-width: 991px) {
   main section {
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
   main section .hero {
     padding: 0 5%;
